@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input v-model="userNumber" type="text" name="" id="" value="" />
+			你输入的是{{userNumber}}月，有{{month[userNumber-1]}}天
+		</div>
+		<script type="text/javascript">
+			let v =new Vue({
+				el:'#app',
+				data:{
+					userNumber:'2',
+					month:[31,28,31,30,31,30,31,30,31]
+				}
+			})
+		</script>
+	</body>
+</html>
