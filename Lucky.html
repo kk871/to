@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/vue.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{chooseUser}}
+			<input type="button" @click="rdm=Math.ceil(Math.random()*10+1)%6;chooseUser=users[rdm]"/ value="幸运用户">
+			
+		</div>
+		<script type="text/javascript">
+			var vue=new Vue({
+				el:'#app',
+				data:{
+					rdm:'',
+					chooseUser:'',
+					users:[
+						{name:"张三",age:"20",sex:"男",code:"1"},
+						{name:"李四",age:"21",sex:"男",code:"2"},
+						{name:"王五",age:"18",sex:"男",code:"3"},
+						{name:"赵六",age:"22",sex:"女",code:"4"},
+						{name:"Tom",age:"43",sex:"女",code:"5"},
+						{name:"Lisa",age:"55",sex:"女",code:"6"}
+
+					]
+				}
+			})
+		</script>
+	</body>
+</html>
