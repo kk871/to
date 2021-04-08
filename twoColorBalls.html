@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+        p {
+            width: 30px;
+            height: 30px;
+            background-color: brown;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            color: #fff;
+            float: left;
+            margin: 0 10px;
+        }
+        
+        .last {
+            background-color: blue;
+        }
+    </style>
+	</head>
+	<body>
+		<script>
+        //   双色球： 7个球    6 个红球  1 个篮球   0  - 35
+        var res = [];
+        var cai = [10, 2, 3, 4, 30, 24, 19];
+
+        function random(a, b) {
+            return Math.floor((Math.random() * (b - a + 1) + a));
+        }
+
+        for (var i = 0; i < 7; i++) {
+            // console.log(i)
+            var num = random(0, 35);
+
+            if (i == 6) {
+                document.write("<p class='last'>" + num + "</p>");
+            } else {
+                document.write("<p>" + num + "</p>");
+            }
+            // console.log(num);
+            res.push(num);
+        }
+
+        // console.log(res)
+        // var n = 0;
+        // for (var i = 0; i < res.length; i++) {
+        //     if (cai[i] == res[i]) {
+        //         n++;
+        //     }
+        //     if (n == 7) {
+        //         alert('你中奖了')
+        //     } else {
+        //         alert('大奖和你擦肩而过')
+        //     }
+        // }
+    </script>
+	</body>
+</html>
